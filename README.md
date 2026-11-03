@@ -30,6 +30,10 @@ no pip, conda,or wheel installer required.
 
 This is no longer optional even for Android OS running python3.10.11 via termux.apk with proot of Ubuntu 22.04 image installed from makers of andronix.apk;
 
+Download the version compatible with your device CPU: https://github.com/nim-lang/nimble/releases/tag/v0.26.2
+
+if you don't know what CPU you have, run ``uname -a`` in the terminal.
+
 To install, you must put nimble on /root. from /root/nimble, run ``/root/nimble install nimpy``.
 Let the install work then crash, and rerun. Then copy the path for nim compiler into MPCR/nim_backend.py
 
