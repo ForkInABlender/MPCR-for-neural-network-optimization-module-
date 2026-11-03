@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 """Numerical kernels with lazy imports and optional PyTorch acceleration."""
 def _numpy():
     try:
