@@ -1,5 +1,6 @@
 #Dylan Kenneth Eliot
 
-scipy==1.15.3
 numpy==1.26.4
 dill==0.4.1
+nimble==0.26.2
+nim==2.4.0
