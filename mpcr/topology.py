@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 """Menger-sponge-inspired recursive partitions and computational tiles."""
 from itertools import product
 
