@@ -1,0 +1,5 @@
+#Dylan Kenneth Eliot
+
+scipy==1.15.3
+numpy==1.26.4
+dill==0.4.1
