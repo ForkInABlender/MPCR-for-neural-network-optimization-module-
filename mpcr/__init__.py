@@ -1,3 +1,5 @@
+# Dylan Kenneth Eliot
+
 from .runtime import MPCRRuntime
 from .graph import TaskGraph, Task
 from .topology import (
@@ -7,7 +9,13 @@ from .topology import (
 from .kernels import (
     dense_matmul, sparse_matmul, gpu_matmul, available_devices, tiled_matmul
 )
-from .nim_backend import nim_add, nim_available
+#from .nim_backend import nim_add, nim_available
+
+import mpcr.nim_backend as nim_backend
+
+nim_add=nim_backend.nim_add
+nim_available=nim_backend.nim_available
+
 from .shared import SharedNDArray, SharedArraySpec
 
 __all__ = [
