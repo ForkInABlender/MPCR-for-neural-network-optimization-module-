@@ -1,5 +1,26 @@
+# Dylan Kenneth Eliot
+
 """Shared-memory transport for NumPy arrays across process boundaries."""
 from dataclasses import dataclass
+import dill
+import multiprocessing
+import multiprocessing.reduction
+from io import BytesIO
+
+reduction = multiprocessing.reduction
+
+class DillForkingPickler(dill.Pickler):
+    @classmethod
+    def dumps(cls, obj, protocol=None):
+        buffer = BytesIO()
+        cls(buffer, protocol=protocol, recurse=True).dump(obj)
+        return buffer.getvalue()
+    loads = staticmethod(dill.loads)
+
+reduction.ForkingPickler = DillForkingPickler
+reduction.dump =lambda obj, file, protocol=None: DillForkingPickler(file, protocol=protocol, recurse=True).dump(obj)
+multiprocessing.queues._ForkingPickler = DillForkingPickler
+
 from multiprocessing import shared_memory
 import numpy as np
 
