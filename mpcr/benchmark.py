@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 """Small reproducible CPU numerical benchmark; not a hardware certification tool."""
 import time
 import numpy as np
