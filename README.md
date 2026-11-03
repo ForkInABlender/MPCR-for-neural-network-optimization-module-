@@ -22,31 +22,17 @@ must be measured against a baseline.
 
 ## Install
 
-```bash
-python -m pip install -e .
-# Optional GPU backend:
-python -m pip install -e ".[gpu]"
-```
+To install, git clone this repository and then copy into your package distribution folder or use as is directly from the repository folder. Or if you're feeling extra clever, put it into a path that is sys.path and sys.modules compatible.
 
-### Optional Nim backend
+no pip, conda,or wheel installer required. 
 
-Install Nim and Nimble, then install NimPy:
+## Nimble & nimpy for nim_backend.py
 
-```bash
-nimble install nimpy
-```
+This is no longer optional even for Android OS running python3.10.11 via termux.apk with proot of Ubuntu 22.04 image installed from makers of andronix.apk;
 
-Compile the extension from the project root:
+To install, you must put nimble on /root. from /root/nimble, run ``/root/nimble install nimpy``.
+Let the install work then crash, and rerun. Then copy the path for nim compiler into MPCR/nim_backend.py
 
-```bash
-nim c --app:lib --threads:on --out:mpcr_nim.so mpcr/nim/mpcr_nim.nim
-```
-
-The extension is optional. `mpcr.nim_backend` detects it and falls back to Python
-when it is not present. The Nim source uses NimPy's `exportpy` interface. A Nim
-compiler and NimPy were not available in the build environment used for this
-package, so the extension source is supplied but not represented as compiled or
-tested.
 
 ## Quick start
 
