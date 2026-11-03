@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 # Optional native extension. Build with Nim + NimPy installed:
 # nim c --app:lib --threads:on --out:mpcr_nim.so mpcr/nim/mpcr_nim.nim
 
