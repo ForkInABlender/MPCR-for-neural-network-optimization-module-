@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 """MPCR Nim native extension loader."""
 
 import importlib.util
