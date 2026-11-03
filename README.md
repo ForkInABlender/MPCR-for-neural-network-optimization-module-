@@ -16,8 +16,7 @@ must be measured against a baseline.
 - Recursive Menger-sponge cell generation (20 retained cells per 3-D subdivision).
 - Balanced array partitioning, with sponge-derived region ordering metadata.
 - NumPy dense matrix multiplication and SciPy sparse matrix multiplication.
-- Optional PyTorch device discovery and GPU matrix multiplication.
-- Optional NimPy extension hook with a pure-Python fallback.
+- NimPy extension hook
 - Runtime diagnostics and a small benchmark utility.
 
 ## Install
