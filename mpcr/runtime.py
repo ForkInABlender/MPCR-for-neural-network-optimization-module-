@@ -1,3 +1,5 @@
+#Dylan Kenneth Eliot
+
 """MPCR orchestration and CPU/GPU execution runtime."""
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
 from contextlib import AbstractContextManager
