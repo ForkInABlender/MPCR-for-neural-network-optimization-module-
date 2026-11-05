@@ -109,3 +109,8 @@ with MPCRRuntime() as runtime:
 - Numerical imports are lazy, so task orchestration can be imported without eagerly
   loading SciPy or NumPy kernels.
 
+
+## Does diskheap.so work with this via preload?
+
+No. Nimble & nimpy were not designed in a way that gcc, as, ld, cc1 nor nimble and nimpy would usefully compile.
+ It breaks the way it normally links and loads .o files such that the object model becomes too fragmented at the 128kb level.
