@@ -10,14 +10,6 @@ def _numpy():
 
 def available_devices():
     devices = ["cpu"]
-    try:
-        import torch
-        if torch.cuda.is_available():
-            devices.append("cuda")
-        if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-            devices.append("mps")
-    except Exception:
-        pass
     return tuple(devices)
 
 def dense_matmul(a, b, out=None):
